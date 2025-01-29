@@ -1,0 +1,1 @@
+cls; gcc -std=c99 -g -Wall -x c main.c sort/bubble_sort.c sort/insertion_sort.c sort/selection_sort.c sort/quick_sort.c sort/heap_sort_3r_pt.c sort/merge_sort.c sort/custom_sort.c search/linear_search.c -I datasets -o algo; .\algo.exe
