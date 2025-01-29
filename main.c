@@ -12,6 +12,7 @@
 #include "sort/merge_sort.h"
 #include "sort/custom_sort.h"
 #include "search/linear_search.h"
+#include "search/binary.h"
 #include "datasets/dataset_1.h"
 #include "datasets/dataset_2.h"
 #include "datasets/dataset_3.h"
@@ -133,6 +134,14 @@ int main(int argc, char **argv){
     assert(2  == linear_search(dataset_list[0].ds, dataset_list[0].size, -1));
     assert(-1 == linear_search(dataset_list[0].ds, dataset_list[0].size, -512));
     assert(-1 == linear_search(dataset_list[0].ds, dataset_list[0].size, 7));
+
+    assert(0  == binary_search(dataset_list[1].ds, dataset_list[1].size, 0));
+    assert(1  == binary_search(dataset_list[1].ds, dataset_list[1].size, 1));
+    assert(6  == binary_search(dataset_list[1].ds, dataset_list[1].size, 6));
+    assert(9  == binary_search(dataset_list[1].ds, dataset_list[1].size, 9));
+    assert(12 == binary_search(dataset_list[1].ds, dataset_list[1].size, 12));
+    assert(-1 == binary_search(dataset_list[1].ds, dataset_list[1].size, -512));
+    assert(-1 == binary_search(dataset_list[1].ds, dataset_list[1].size, 13));
 
     return 0;
 }
